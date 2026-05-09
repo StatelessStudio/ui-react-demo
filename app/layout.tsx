@@ -48,7 +48,11 @@ export default function RootLayout({
 				<ToastProvider position="bottom-right">
 					<SidebarLayout
 						sidebar={<AppSidebar brand={<Brand />} />}
-						mobileHeader={<Brand />}
+						mobileHeader={
+							<div className="flex items-center gap-2 px-2">
+								<Brand />
+							</div>
+						}
 					>
 						{children}
 					</SidebarLayout>
