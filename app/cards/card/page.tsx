@@ -114,6 +114,14 @@ export default function CardsPage() {
 							<p className="text-sm">Card content goes here.</p>
 						</CardContent>
 					</Card>
+					<Card>
+						<CardHeader>
+							<CardTitle level={2}>None</CardTitle>
+						</CardHeader>
+						<CardContent>
+							<p className="text-sm">Card content goes here.</p>
+						</CardContent>
+					</Card>
 				</div>
 			</div>
 		</div>
