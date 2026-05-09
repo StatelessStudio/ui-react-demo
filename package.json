@@ -1,5 +1,5 @@
 {
-	"name": "{{ remrg:var project-name }}",
+	"name": "@stateless-studio/ui-react-demo",
 	"version": "1.0.0",
 	"private": true,
 	"description": "",

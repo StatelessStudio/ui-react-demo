@@ -1,4 +1,4 @@
-# {{ remrg:var project-name }}
+# @stateless-studio/ui-react-demo
 
 {{ remrg:task Write a brief project description }}
 
