@@ -18,6 +18,7 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+.env*
 
 # Generated artifacts (generic)
 dist/
@@ -27,7 +28,20 @@ coverage/
 cache/
 node_modules/
 *.cache
+
+# vercel
+.vercel
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# typescript
 *.tsbuildinfo
+next-env.d.ts
 .eslintcache
 *.zip
 *.tar.gz

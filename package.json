@@ -1,16 +1,18 @@
 {
 	"name": "{{ remrg:var project-name }}",
 	"version": "1.0.0",
+	"private": true,
 	"description": "",
 	"author": "{{ remrg:var organization }}",
 	"license": "{{ remrg:var license }}",
 	"scripts": {
-		"build": "tsc -p tsconfig.json",
-		"dev": "tsc -p tsconfig.json --watch",
+		"start": "next start -p 8080",
+		"build": "next build",
+		"dev": "next dev -p 8080",
 		"typecheck": "tsc -p tsconfig.json --noEmit",
 		"lint": "eslint . --fix && prettier --write .",
 		"lint:check": "prettier --check . && eslint .",
-		"test": "npm run lint && npm run typecheck && npm run test:run",
+		"test": "npm run lint && npm run build && npm run test:run",
 		"test:ci": "npm run lint:check && npm run typecheck && npm run test:run",
 		"test:dev": "vitest --ui --coverage",
 		"test:run": "vitest run --coverage && npm run test:e2e",
@@ -21,19 +23,25 @@
 		"node": ">=22.0.0",
 		"npm": ">=10.8.2"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"next": "16.2.4",
+		"react": "19.2.4",
+		"react-dom": "19.2.4"
+	},
 	"devDependencies": {
-		"@eslint/js": "^10.0.1",
 		"@playwright/test": "^1.43.0",
-		"@types/node": "^22.19.17",
-		"@typescript-eslint/eslint-plugin": "^8.57.2",
-		"@typescript-eslint/parser": "^8.57.2",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
 		"@vitest/coverage-v8": "^4.1.2",
 		"@vitest/ui": "^4.1.2",
-		"eslint": "^10.1.0",
+		"eslint": "^9",
+		"eslint-config-next": "16.2.4",
 		"prettier": "^3.8.1",
 		"prettier-plugin-brace-style": "^0.10.1",
-		"typescript": "^5.9.3",
+		"tailwindcss": "^4",
+		"typescript": "^5",
 		"vitest": "^4.1.2"
 	}
 }

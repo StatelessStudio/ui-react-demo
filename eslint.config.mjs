@@ -1,31 +1,30 @@
-import js from '@eslint/js';
-import tsParser from '@typescript-eslint/parser';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
 
-const eslintConfig = [
+const eslintConfig = defineConfig([
+	...nextVitals,
+	...nextTs,
+	// Override default ignores of eslint-config-next.
+	globalIgnores([
+		// Default ignores of eslint-config-next:
+		'.next/**',
+		'coverage/**',
+		'out/**',
+		'playwright-report/**',
+		'build/**',
+		'next-env.d.ts',
+	]),
 	{
-		ignores: ['node_modules', 'dist', 'coverage'],
-	},
-	{
-		files: ['**/*.ts', '**/*.tsx'],
 		languageOptions: {
-			parser: tsParser,
 			parserOptions: {
-				ecmaVersion: 'latest',
-				sourceType: 'module',
-				projectService: true,
+				projectService: {
+					allowDefaultProject: ['*.js', '*.mjs'],
+				},
+				tsconfigRootDir: import.meta.dirname,
 			},
-			globals: {
-				console: 'readonly',
-				process: 'readonly',
-			},
-		},
-		plugins: {
-			'@typescript-eslint': tsPlugin,
 		},
 		rules: {
-			...js.configs.recommended.rules,
-			...tsPlugin.configs.recommended.rules,
 			'@typescript-eslint/no-floating-promises': ['error'],
 			'@typescript-eslint/no-unused-vars': ['warn'],
 			'brace-style': ['error', 'stroustrup'],
@@ -37,6 +36,6 @@ const eslintConfig = [
 			semi: ['error', 'always'],
 		},
 	},
-];
+]);
 
 export default eslintConfig;
