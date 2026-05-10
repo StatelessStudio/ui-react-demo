@@ -32,6 +32,12 @@ export const components = [
 				path: '/cards/card',
 				summary: 'A card component for displaying content in a card layout',
 			},
+			{
+				name: 'Stat Card',
+				path: '/cards/stat-card',
+				summary:
+					'A component used to display statistics, metrics, or key data points concisely.',
+			},
 		],
 	},
 	{
