@@ -104,6 +104,11 @@ export const components = [
 				summary: 'A combo box component for selecting options from a dropdown',
 			},
 			{
+				name: 'Form',
+				path: '/forms/form',
+				summary: 'A form component for grouping related form elements',
+			},
+			{
 				name: 'Form Group',
 				path: '/forms/form-group',
 				summary: 'A form group component for grouping related form elements',
