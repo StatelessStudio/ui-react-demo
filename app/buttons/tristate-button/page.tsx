@@ -1,6 +1,9 @@
 'use client';
 
-import { TriStateButton } from '@stateless-studio/ui-react/components/buttons';
+import {
+	Button,
+	TriStateButton,
+} from '@stateless-studio/ui-react/components/buttons';
 import { Heading } from '@stateless-studio/ui-react/components/typography';
 import {
 	Card,
@@ -10,7 +13,7 @@ import {
 } from '@stateless-studio/ui-react/components/cards';
 import { Grid } from '@stateless-studio/ui-react/components/layout';
 import { useState } from 'react';
-import { ToggleBadge } from '@stateless-studio/ui-react';
+import { Badge, Group, ToggleBadge } from '@stateless-studio/ui-react';
 
 export default function TriStateButtonsPage() {
 	const [state, setState] = useState<null | 'loading' | 'success' | 'error'>(
@@ -18,6 +21,10 @@ export default function TriStateButtonsPage() {
 	);
 
 	const [simulateError, setSimulateError] = useState(false);
+
+	function resetState() {
+		setState(null);
+	}
 
 	function handleClick() {
 		setState('loading');
@@ -29,24 +36,34 @@ export default function TriStateButtonsPage() {
 			<div>
 				<Heading level={1}>TriState Buttons</Heading>
 				<p className="text-muted-foreground">
-					Interactive elements that trigger actions and events.
+					Stateful button to indicate loading, success, and error states with
+					built-in styles and icons.
 				</p>
 			</div>
 
 			<Card>
 				<CardHeader>
-					<CardTitle level={2}>Colors</CardTitle>
+					<CardTitle level={2}>TriState Button</CardTitle>
 				</CardHeader>
 				<CardContent>
-					<div>
+					<Heading level={3}>Options</Heading>
+					<Group gap="md">
 						<ToggleBadge
-							color="danger"
+							color="accent"
 							onCheckedChange={(checked) => setSimulateError(checked)}
 						>
 							Simulate Error
 						</ToggleBadge>
-						<br />
-						<br />
+						<Badge color="accent">Current State: {state || 'idle'}</Badge>
+						<Button
+							onClick={resetState}
+							size="sm"
+						>
+							Reset State
+						</Button>
+					</Group>
+					<Heading level={3}>Button Example</Heading>
+					<Group className="mt-4">
 						<TriStateButton
 							state={state}
 							size="md"
@@ -54,7 +71,7 @@ export default function TriStateButtonsPage() {
 						>
 							Test
 						</TriStateButton>
-					</div>
+					</Group>
 				</CardContent>
 			</Card>
 		</Grid>

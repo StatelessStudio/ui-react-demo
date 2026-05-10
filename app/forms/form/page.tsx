@@ -19,8 +19,13 @@ import { Toggle } from '@stateless-studio/ui-react/components/toggles';
 
 export default function FormPage() {
 	const [shouldError, setShouldError] = useState(false);
+	const [success, setSuccess] = useState<boolean | null>(null);
 	const [error, setError] = useState<string | null>(null);
-	const [isLoading, setIsLoading] = useState(false);
+
+	function resetState() {
+		setError(null);
+		setSuccess(null);
+	}
 
 	return (
 		<Grid>
@@ -37,10 +42,10 @@ export default function FormPage() {
 				<CardContent>
 					<Form
 						error={error}
-						isLoading={isLoading}
+						success={success}
+						onChange={resetState}
 						onSubmit={async () => {
-							setIsLoading(true);
-							setError(null);
+							resetState();
 							console.log('Submitting form...');
 							await new Promise<void>((a) => setTimeout(a, 500));
 
@@ -51,7 +56,7 @@ export default function FormPage() {
 								console.log('Form submitted!');
 							}
 
-							setIsLoading(false);
+							setSuccess(true);
 						}}
 					>
 						<FormGroup
