@@ -17,6 +17,11 @@ export const components = [
 				path: '/buttons/toggle-group',
 				summary: 'A group of toggle buttons',
 			},
+			{
+				name: 'TriState Button',
+				path: '/buttons/tristate-button',
+				summary: 'A button that can be in loading, success, or error state',
+			},
 		],
 	},
 	{
