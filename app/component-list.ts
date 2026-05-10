@@ -308,6 +308,11 @@ export const components = [
 				path: '/progress/spinner',
 				summary: 'A spinner component for indicating loading state',
 			},
+			{
+				name: 'TriState',
+				path: '/progress/tristate',
+				summary: 'A component for indicating loading, success, or error states',
+			},
 		],
 	},
 	{
