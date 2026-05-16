@@ -150,6 +150,7 @@ export default function DataTablePage() {
 								header: 'Invoice',
 								key: 'invoice',
 								sortable: true,
+								className: 'w-[1%] whitespace-nowrap bg-primary/5 font-medium',
 							},
 							{
 								header: 'Status',

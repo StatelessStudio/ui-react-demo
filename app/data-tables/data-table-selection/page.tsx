@@ -172,6 +172,7 @@ export default function DataTableSelectionPage() {
 									/>
 								),
 								key: 'select',
+								className: 'w-[1%] whitespace-nowrap bg-primary/5',
 								cell: (item) => (
 									<Checkbox
 										checked={selection.isSelected(item.id)}
