@@ -205,7 +205,6 @@ export const components = [
 				summary:
 					'A layout component providing structured page titles, subtitles, and actions side-by-side',
 			},
-
 			{
 				name: 'Scroll Area',
 				path: '/layout/scroll-area',
@@ -379,6 +378,17 @@ export const components = [
 				name: 'Text',
 				path: '/typography/text',
 				summary: 'A typography component for consistent text styling and sizes',
+			},
+		],
+	},
+	{
+		name: 'Views',
+		components: [
+			{
+				name: 'Resource List View',
+				path: '/views/resource-list-view',
+				summary:
+					'A layout component providing structured list view with grid, filtering and selection',
 			},
 		],
 	},
