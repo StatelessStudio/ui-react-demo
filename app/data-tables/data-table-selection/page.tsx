@@ -10,6 +10,7 @@ import {
 } from '@stateless-studio/ui-react/components/cards';
 import { Badge } from '@stateless-studio/ui-react/components/feedback';
 import { Button } from '@stateless-studio/ui-react/components/buttons';
+import { Checkbox } from '@stateless-studio/ui-react/components/forms';
 import { useTableSelection } from '@stateless-studio/ui-react/hooks';
 import {
 	DataTable,
@@ -154,8 +155,7 @@ export default function DataTableSelectionPage() {
 						columns={[
 							{
 								header: (
-									<input
-										type="checkbox"
+									<Checkbox
 										checked={
 											selection.selectedCount === processedData.length &&
 											processedData.length > 0
@@ -173,8 +173,7 @@ export default function DataTableSelectionPage() {
 								),
 								key: 'select',
 								cell: (item) => (
-									<input
-										type="checkbox"
+									<Checkbox
 										checked={selection.isSelected(item.id)}
 										onChange={() => selection.toggleRow(item.id)}
 										aria-label={`Select invoice ${item.invoice}`}
