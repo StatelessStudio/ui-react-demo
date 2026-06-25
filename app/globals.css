@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@source "../../node_modules/@stateless-studio/ui-react/";
+@source "../node_modules/@stateless-studio/ui-react/";
 
 /* Import library theme variables and global styles */
 @import '@stateless-studio/ui-react/ui-react.css';
