@@ -1,3 +1,4 @@
+@plugin 'tailwindcss-animate';
 @import 'tailwindcss';
 @source "../node_modules/@stateless-studio/ui-react/";
 
