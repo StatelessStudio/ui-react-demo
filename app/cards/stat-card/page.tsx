@@ -1,5 +1,6 @@
 'use client';
 
+import { Button } from '@stateless-studio/ui-react/components/buttons';
 import { StatCard } from '@stateless-studio/ui-react/components/cards';
 import {
 	Heading,
@@ -164,6 +165,54 @@ export default function StatCardDemo() {
 						value="$48,000"
 						icon={CheckIcon}
 						color="gradient"
+					/>
+				</Grid>
+			</section>
+
+			<section>
+				<Heading
+					level={2}
+					className="mb-4"
+				>
+					With Footer
+				</Heading>
+
+				<Grid
+					cols={3}
+					gap={4}
+				>
+					<StatCard
+						label="Total Orders"
+						value="845"
+						icon={BoxIcon}
+						color="muted"
+						footer={
+							<Button color="gradient" className="w-full">
+								View Orders
+							</Button>
+						}
+					/>
+					<StatCard
+						label="Customer Rating"
+						value="4.8/5"
+						icon={StarIcon}
+						color="secondary"
+						footer={
+							<Text className="text-sm text-foreground/60">
+								+0.2 points
+							</Text>
+						}
+					/>
+					<StatCard
+						label="Tasks Completed"
+						value="120"
+						icon={CheckIcon}
+						color="success"
+						footer={
+							<Text className="text-sm text-foreground/60">
+								Last updated: 2 hours ago
+							</Text>
+						}
 					/>
 				</Grid>
 			</section>
