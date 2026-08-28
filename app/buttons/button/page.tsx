@@ -128,7 +128,7 @@ export default function ButtonsPage() {
 
 			<Card>
 				<CardHeader>
-					<CardTitle level={2}>Variants</CardTitle>
+					<CardTitle level={2}>Fill</CardTitle>
 				</CardHeader>
 				<CardContent>
 					<div className="flex flex-wrap gap-4">
