@@ -7,6 +7,8 @@ import {
 	CardFooter,
 } from '@stateless-studio/ui-react/components/cards';
 import { Button } from '@stateless-studio/ui-react/components/buttons';
+import { ContextButton } from '@stateless-studio/ui-react/components/buttons';
+import { MenuDotsIcon } from '@stateless-studio/ui-react/icons';
 import { Heading } from '@stateless-studio/ui-react/components/typography';
 
 export default function CardsPage() {
@@ -56,6 +58,27 @@ export default function CardsPage() {
 								</p>
 							</div>
 						</div>
+					</CardContent>
+					<CardFooter>
+						<Button>Save Changes</Button>
+					</CardFooter>
+				</Card>
+
+				<Card
+					actionMenu={
+						<ContextButton>
+							<MenuDotsIcon />
+						</ContextButton>
+					}
+				>
+					<CardHeader>
+						<CardTitle level={2}>Item Status</CardTitle>
+						<CardDescription>
+							View and update the status of your items.
+						</CardDescription>
+					</CardHeader>
+					<CardContent>
+						<p className="text-sm">No items to display.</p>
 					</CardContent>
 					<CardFooter>
 						<Button>Save Changes</Button>

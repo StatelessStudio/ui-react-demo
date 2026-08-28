@@ -13,6 +13,11 @@ export const components = [
 				summary: 'A group of buttons',
 			},
 			{
+				name: 'Context Button',
+				path: '/buttons/context-button',
+				summary: 'A compact button for card actions and contextual controls',
+			},
+			{
 				name: 'Toggle Group',
 				path: '/buttons/toggle-group',
 				summary: 'A group of toggle buttons',

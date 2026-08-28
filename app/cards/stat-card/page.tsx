@@ -1,19 +1,24 @@
 'use client';
 
-import { Button } from '@stateless-studio/ui-react/components/buttons';
+import {
+	Button,
+	ContextButton,
+} from '@stateless-studio/ui-react/components/buttons';
 import { StatCard } from '@stateless-studio/ui-react/components/cards';
 import {
 	Heading,
 	Text,
 } from '@stateless-studio/ui-react/components/typography';
-import { Grid } from '@stateless-studio/ui-react/components/layout';
+import { Flex, Grid } from '@stateless-studio/ui-react/components/layout';
 import {
 	BoxIcon,
 	StarIcon,
 	CheckIcon,
 	CircleXIcon,
 	CircleCheckIcon,
+	MenuDotsIcon,
 } from '@stateless-studio/ui-react/icons';
+import { Menu, MenuItem, Ping, Popover } from '@stateless-studio/ui-react';
 
 export default function StatCardDemo() {
 	return (
@@ -75,13 +80,6 @@ export default function StatCardDemo() {
 						icon={BoxIcon}
 						iconBgColor="bg-blue-100 dark:bg-blue-900/30"
 						iconColor="text-blue-600 dark:text-blue-400"
-					/>
-					<StatCard
-						label="Customer Rating"
-						value="4.8/5"
-						icon={StarIcon}
-						iconBgColor="bg-yellow-100 dark:bg-yellow-900/30"
-						iconColor="text-yellow-600 dark:text-yellow-400"
 					/>
 					<StatCard
 						label="Tasks Completed"
@@ -187,7 +185,10 @@ export default function StatCardDemo() {
 						icon={BoxIcon}
 						color="muted"
 						footer={
-							<Button color="gradient" className="w-full">
+							<Button
+								color="gradient"
+								className="w-full"
+							>
 								View Orders
 							</Button>
 						}
@@ -198,9 +199,7 @@ export default function StatCardDemo() {
 						icon={StarIcon}
 						color="secondary"
 						footer={
-							<Text className="text-sm text-foreground/60">
-								+0.2 points
-							</Text>
+							<Text className="text-sm text-foreground/60">+0.2 points</Text>
 						}
 					/>
 					<StatCard
@@ -212,6 +211,72 @@ export default function StatCardDemo() {
 							<Text className="text-sm text-foreground/60">
 								Last updated: 2 hours ago
 							</Text>
+						}
+					/>
+				</Grid>
+			</section>
+
+			<section>
+				<Heading
+					level={2}
+					className="mb-4"
+				>
+					With Action Menu
+				</Heading>
+
+				<Grid
+					cols={3}
+					gap={4}
+				>
+					<StatCard
+						label="Total Orders"
+						value="845"
+						icon={BoxIcon}
+						color="muted"
+						actionMenu={
+							<Flex align="center">
+								<Ping color="success" />
+								<ContextButton>
+									<MenuDotsIcon />
+								</ContextButton>
+							</Flex>
+						}
+					/>
+					<StatCard
+						label="Customer Rating"
+						value="4.8/5"
+						icon={StarIcon}
+						color="secondary"
+						actionMenu={
+							<ContextButton>
+								<MenuDotsIcon className="text-white" />
+							</ContextButton>
+						}
+					/>
+					<StatCard
+						label="Tasks Completed"
+						value="120"
+						icon={CheckIcon}
+						color="success"
+						actionMenu={
+							<Popover
+								position="top"
+								className="p-0"
+								trigger={
+									<ContextButton className="focus:ring-white">
+										<MenuDotsIcon
+											orientation="horizontal"
+											className="text-white"
+										/>
+									</ContextButton>
+								}
+							>
+								<Menu>
+									<MenuItem>Action 1</MenuItem>
+									<MenuItem>Action 2</MenuItem>
+									<MenuItem>Action 3</MenuItem>
+								</Menu>
+							</Popover>
 						}
 					/>
 				</Grid>
