@@ -1,6 +1,9 @@
 'use client';
 
-import { Heading } from '@stateless-studio/ui-react/components/typography';
+import {
+	Heading,
+	Subtitle,
+} from '@stateless-studio/ui-react/components/typography';
 import {
 	Card,
 	CardContent,
@@ -14,6 +17,7 @@ export default function TypographyPage() {
 		<Grid>
 			<div>
 				<Heading level={1}>Typography</Heading>
+				<Subtitle>Subtitle Text</Subtitle>
 				<p className="text-muted-foreground">
 					Text styles and hierarchies for readable content.
 				</p>

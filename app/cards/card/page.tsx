@@ -5,6 +5,7 @@ import {
 	CardDescription,
 	CardContent,
 	CardFooter,
+	CardSubtitle,
 } from '@stateless-studio/ui-react/components/cards';
 import { Button } from '@stateless-studio/ui-react/components/buttons';
 import { ContextButton } from '@stateless-studio/ui-react/components/buttons';
@@ -20,6 +21,24 @@ export default function CardsPage() {
 					A flexible container for grouping content together.
 				</p>
 			</div>
+
+			<Card>
+				<CardHeader>
+					<CardTitle level={2}>Card Title</CardTitle>
+					<CardSubtitle size="sm" margin={2}>
+						Card Subtitle
+					</CardSubtitle>
+					<CardDescription>
+						This is an example extended description for the sample card.
+					</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<p>Card content goes here.</p>
+				</CardContent>
+				<CardFooter>
+					<Button>Footer Action</Button>
+				</CardFooter>
+			</Card>
 
 			<div className="grid grid-cols-3 gap-6">
 				<Card>
