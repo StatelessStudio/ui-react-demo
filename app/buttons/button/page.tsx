@@ -156,6 +156,58 @@ export default function ButtonsPage() {
 					</div>
 				</CardContent>
 			</Card>
+
+			<Card>
+				<CardHeader>
+					<CardTitle level={2}>Rounding</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<div className="flex flex-wrap gap-4">
+						<Button
+							color="primary"
+							rounding="none"
+							onClick={() => handleClick('None')}
+						>
+							None
+						</Button>
+						<Button
+							color="primary"
+							rounding="sm"
+							onClick={() => handleClick('Small')}
+						>
+							Small
+						</Button>
+						<Button
+							color="primary"
+							rounding="md"
+							onClick={() => handleClick('Medium')}
+						>
+							Medium
+						</Button>
+						<Button
+							color="primary"
+							rounding="lg"
+							onClick={() => handleClick('Large')}
+						>
+							Large
+						</Button>
+						<Button
+							color="primary"
+							rounding="xl"
+							onClick={() => handleClick('Extra Large')}
+						>
+							Extra Large
+						</Button>
+						<Button
+							color="primary"
+							rounding="full"
+							onClick={() => handleClick('Full')}
+						>
+							Full
+						</Button>
+					</div>
+				</CardContent>
+			</Card>
 		</Grid>
 	);
 }
