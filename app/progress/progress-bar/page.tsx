@@ -9,7 +9,7 @@ import {
 	CardTitle,
 } from '@stateless-studio/ui-react/components/cards';
 import { ProgressBar } from '@stateless-studio/ui-react/components/progress';
-import { Grid } from '@stateless-studio/ui-react/components/layout';
+import { Grid, Stack } from '@stateless-studio/ui-react/components/layout';
 
 export default function ProgressPage() {
 	const [progress, setProgress] = useState(0);
@@ -89,6 +89,56 @@ export default function ProgressPage() {
 						value={progress}
 						size="lg"
 					/>
+				</CardContent>
+			</Card>
+			<Card>
+				<CardHeader>
+					<CardTitle level={2}>Orientation</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<Stack gap="lg">
+						<div>
+							<p>Horizontal (default)</p>
+							<ProgressBar
+								value={progress}
+								orientation="horizontal"
+							/>
+						</div>
+						<div>
+							<p>Vertical</p>
+							<ProgressBar
+								value={progress}
+								orientation="vertical"
+								className="h-[120px] w-[10px]"
+							/>
+						</div>
+					</Stack>
+				</CardContent>
+			</Card>
+			<Card>
+				<CardHeader>
+					<CardTitle level={2}>Direction</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<Stack gap="lg">
+						<div>
+							<p>Reverse (Horizontal)</p>
+							<ProgressBar
+								value={progress}
+								orientation="horizontal"
+								direction="reverse"
+							/>
+						</div>
+						<div>
+							<p>Reverse (Vertical)</p>
+							<ProgressBar
+								value={progress}
+								orientation="vertical"
+								direction="reverse"
+								className="h-[120px] w-[10px]"
+							/>
+						</div>
+					</Stack>
 				</CardContent>
 			</Card>
 		</Grid>
