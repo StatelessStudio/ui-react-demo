@@ -183,7 +183,6 @@ export default function StatCardDemo() {
 						label="Total Orders"
 						value="845"
 						icon={BoxIcon}
-						color="muted"
 						footer={
 							<Button
 								color="gradient"
@@ -199,7 +198,7 @@ export default function StatCardDemo() {
 						icon={StarIcon}
 						color="secondary"
 						footer={
-							<Text className="text-sm text-foreground/60">+0.2 points</Text>
+							<Text size="sm" className="text-white/70">+0.2 points</Text>
 						}
 					/>
 					<StatCard
@@ -208,7 +207,7 @@ export default function StatCardDemo() {
 						icon={CheckIcon}
 						color="success"
 						footer={
-							<Text className="text-sm text-foreground/60">
+							<Text size="sm" className="text-white/70">
 								Last updated: 2 hours ago
 							</Text>
 						}
@@ -232,7 +231,6 @@ export default function StatCardDemo() {
 						label="Total Orders"
 						value="845"
 						icon={BoxIcon}
-						color="muted"
 						actionMenu={
 							<Flex align="center">
 								<Ping color="success" />
