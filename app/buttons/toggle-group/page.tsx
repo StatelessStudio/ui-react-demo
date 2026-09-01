@@ -43,6 +43,41 @@ export default function ToggleGroupPage() {
 						</div>
 					</CardContent>
 				</Card>
+			
+				<Card>
+					<CardHeader>
+						<CardTitle>Pill Appearance</CardTitle>
+					</CardHeader>
+					<CardContent className="flex flex-col gap-4 items-start">
+						<Heading level={3}>Horizontal Pills</Heading>
+						<ToggleGroup
+							type="single"
+							value={alignment}
+							onValueChange={(val) => setAlignment(val as string)}
+							appearance="pill"
+						>
+							<ToggleGroupItem value="left">Left</ToggleGroupItem>
+							<ToggleGroupItem value="center">Center</ToggleGroupItem>
+							<ToggleGroupItem value="right">Right</ToggleGroupItem>
+						</ToggleGroup>
+						<div className="text-sm text-muted-foreground mt-2">
+							Selected value: <strong>{alignment || 'None'}</strong>
+						</div>
+
+						<Heading level={3}>Vertical Pills</Heading>
+						<ToggleGroup
+							type="single"
+							orientation="vertical"
+							value={alignment}
+							onValueChange={(val) => setAlignment(val as string)}
+							appearance="pill"
+						>
+							<ToggleGroupItem value="left">Left</ToggleGroupItem>
+							<ToggleGroupItem value="center">Center</ToggleGroupItem>
+							<ToggleGroupItem value="right">Right</ToggleGroupItem>
+						</ToggleGroup>
+					</CardContent>
+				</Card>
 
 				<Card>
 					<CardHeader>

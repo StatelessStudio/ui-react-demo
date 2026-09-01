@@ -34,6 +34,32 @@ export default function ButtonGroupPage() {
 
 				<Card>
 					<CardHeader>
+						<CardTitle>Pill Appearance</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<ButtonGroup appearance="pill">
+							<Button color="primary">Left</Button>
+							<Button color="primary">Middle</Button>
+							<Button color="primary">Right</Button>
+						</ButtonGroup>
+					</CardContent>
+				</Card>
+
+				<Card>
+					<CardHeader>
+						<CardTitle>Grouped Appearance</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<ButtonGroup appearance="grouped">
+							<Button color="primary">Left</Button>
+							<Button color="primary">Middle</Button>
+							<Button color="primary">Right</Button>
+						</ButtonGroup>
+					</CardContent>
+				</Card>
+
+				<Card>
+					<CardHeader>
 						<CardTitle>Outline Variants</CardTitle>
 					</CardHeader>
 					<CardContent>
