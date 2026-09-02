@@ -13,7 +13,11 @@ import {
 } from '@stateless-studio/ui-react/components/cards';
 import { ObjectLabel } from '@stateless-studio/ui-react/components/media';
 import { Text } from '@stateless-studio/ui-react/components/typography';
-import { BoxIcon, CheckIcon, SearchIcon } from '@stateless-studio/ui-react/icons';
+import {
+	BoxIcon,
+	CheckIcon,
+	SearchIcon,
+} from '@stateless-studio/ui-react/icons';
 
 export default function ObjectLabelPage() {
 	return (
@@ -160,7 +164,14 @@ export default function ObjectLabelPage() {
 									ID
 								</div>
 							}
-							label={<Text size="sm" weight="bold">Bold Label</Text>}
+							label={
+								<Text
+									size="sm"
+									weight="bold"
+								>
+									Bold Label
+								</Text>
+							}
 						/>
 						<ObjectLabel
 							object={
@@ -168,7 +179,14 @@ export default function ObjectLabelPage() {
 									ID
 								</div>
 							}
-							label={<Text size="lg" weight="semibold">Large Label</Text>}
+							label={
+								<Text
+									size="lg"
+									weight="semibold"
+								>
+									Large Label
+								</Text>
+							}
 						/>
 					</Group>
 				</CardContent>
@@ -186,7 +204,14 @@ export default function ObjectLabelPage() {
 									JS
 								</div>
 							}
-							label={<Text size="sm" weight="bold">JavaScript</Text>}
+							label={
+								<Text
+									size="sm"
+									weight="bold"
+								>
+									JavaScript
+								</Text>
+							}
 						/>
 						<ObjectLabel
 							object={
@@ -194,7 +219,14 @@ export default function ObjectLabelPage() {
 									RS
 								</div>
 							}
-							label={<Text size="sm" weight="bold">Rust</Text>}
+							label={
+								<Text
+									size="sm"
+									weight="bold"
+								>
+									Rust
+								</Text>
+							}
 						/>
 					</Group>
 				</CardContent>

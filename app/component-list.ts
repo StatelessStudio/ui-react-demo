@@ -239,8 +239,7 @@ export const components = [
 			{
 				name: 'ObjectLabel',
 				path: '/media/object-label',
-				summary:
-					'Displays an object (icon, image, etc.) with a label below',
+				summary: 'Displays an object (icon, image, etc.) with a label below',
 			},
 		],
 	},

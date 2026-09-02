@@ -198,7 +198,12 @@ export default function StatCardDemo() {
 						icon={StarIcon}
 						color="secondary"
 						footer={
-							<Text size="sm" className="text-white/70">+0.2 points</Text>
+							<Text
+								size="sm"
+								className="text-white/70"
+							>
+								+0.2 points
+							</Text>
 						}
 					/>
 					<StatCard
@@ -207,7 +212,10 @@ export default function StatCardDemo() {
 						icon={CheckIcon}
 						color="success"
 						footer={
-							<Text size="sm" className="text-white/70">
+							<Text
+								size="sm"
+								className="text-white/70"
+							>
 								Last updated: 2 hours ago
 							</Text>
 						}

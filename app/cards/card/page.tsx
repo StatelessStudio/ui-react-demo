@@ -25,7 +25,10 @@ export default function CardsPage() {
 			<Card>
 				<CardHeader>
 					<CardTitle level={2}>Card Title</CardTitle>
-					<CardSubtitle size="sm" margin={2}>
+					<CardSubtitle
+						size="sm"
+						margin={2}
+					>
 						Card Subtitle
 					</CardSubtitle>
 					<CardDescription>

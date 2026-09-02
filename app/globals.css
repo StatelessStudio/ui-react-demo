@@ -18,11 +18,11 @@
 
 	/* Border Radius */
 	--border-radius-none: 0;
-	--border-radius-sm: 0.25rem;   /* 4px */
-	--border-radius-md: 0.375rem;  /* 6px - Default */
-	--border-radius-lg: 0.5rem;    /* 8px */
-	--border-radius-xl: 0.75rem;   /* 12px */
-	--border-radius-full: 9999px;  /* Infinite */
+	--border-radius-sm: 0.25rem; /* 4px */
+	--border-radius-md: 0.375rem; /* 6px - Default */
+	--border-radius-lg: 0.5rem; /* 8px */
+	--border-radius-xl: 0.75rem; /* 12px */
+	--border-radius-full: 9999px; /* Infinite */
 
 	/* Greys */
 	--subtle-grey: #cbd5e1; /* Tailwind slate-300 */

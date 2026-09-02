@@ -43,7 +43,7 @@ export default function ToggleGroupPage() {
 						</div>
 					</CardContent>
 				</Card>
-			
+
 				<Card>
 					<CardHeader>
 						<CardTitle>Pill Appearance</CardTitle>
