@@ -236,6 +236,12 @@ export const components = [
 				path: '/media/avatar',
 				summary: 'An avatar component for displaying user profile pictures',
 			},
+			{
+				name: 'ObjectLabel',
+				path: '/media/object-label',
+				summary:
+					'Displays an object (icon, image, etc.) with a label below',
+			},
 		],
 	},
 	{
