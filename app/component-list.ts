@@ -257,6 +257,12 @@ export const components = [
 				summary: 'A menu component for displaying a list of navigation links',
 			},
 			{
+				name: 'ObjectMenu',
+				path: '/navigation/object-menu',
+				summary:
+					'An object menu component for displaying a list of objects with labels',
+			},
+			{
 				name: 'Pagination',
 				path: '/navigation/pagination',
 				summary:

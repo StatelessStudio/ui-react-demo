@@ -23,10 +23,7 @@ export const metadata: Metadata = {
 
 export function Brand() {
 	return (
-		<div className="flex items-center gap-2 px-2">
-			<span className="w-6 h-6 rounded-full shrink-none bg-primary"></span>
-			<span className="text-sm font-medium">{metadata.title as string}</span>
-		</div>
+		<span className="text-sm font-medium">{metadata.title as string}</span>
 	);
 }
 
