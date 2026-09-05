@@ -120,6 +120,13 @@ export default function DataTablePage() {
 		return () => clearTimeout(timer);
 	}, [searchTerm, tableState, fetchInvoices]);
 
+	// Reset pagination when data changes and current page is out of bounds
+	useEffect(() => {
+		if (tableState.page > totalPages && totalPages > 0) {
+			setTableState((prev) => ({ ...prev, page: 1 }));
+		}
+	}, [data.length, totalPages]);
+
 	return (
 		<Grid>
 			<PageHeading
